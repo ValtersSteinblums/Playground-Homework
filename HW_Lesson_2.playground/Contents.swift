@@ -79,7 +79,7 @@ let birthYear = 1993
 
 let totalYearsFromBirth = 2022 - birthYear
 let totalMonthsFromBirth = (totalYearsFromBirth * 12) - birthMonth
-let totalDaysFromBirth = (Double(totalYearsFromBirth) * 365.5) - Double(birthDay)
+let totalDaysFromBirth = (Double(totalYearsFromBirth) * 365.25) - Double(birthDay)
 
 print("Total years: \(totalYearsFromBirth) , total months: \(totalMonthsFromBirth), total days: \(totalDaysFromBirth) have passed")
 
