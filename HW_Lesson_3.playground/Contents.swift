@@ -9,13 +9,13 @@ import UIKit
  */
 let period = 5
 let depositAmount: Double = 500_000
-let rate = 0.015
+let rate: Double = 0.015
 
 var profitPerAnnum: Double = 0
 var profit: Double = 0
 
 for _ in 1...period {
-    profitPerAnnum = Double(depositAmount) * rate
+    profitPerAnnum = depositAmount * rate
     profit += profitPerAnnum
 }
 
