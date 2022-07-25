@@ -10,6 +10,8 @@ var secondVariable: Float = 42.0
 var sumOfVariables: Double
 sumOfVariables = Double(firstVariable + secondVariable)
 print(sumOfVariables)
+print(sumOfVariables.rounded())
+
 
 /*
  Ex2:
