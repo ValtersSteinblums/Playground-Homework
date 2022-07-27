@@ -19,10 +19,14 @@ let resultsOfGames = [
     "Washington Wizards" : ["117:112", "107:122"]
 ]
 
-for (key, value) in resultsOfGames {
-    for separateValue in 0...value.count - 1 {
-        print("\(myTeam) against \(key) scored - \(value[separateValue])")
+for (team, score) in resultsOfGames {
+    for separateValue in 0..<score.count {
+        print("\(myTeam) against \(team) scored - \(score[separateValue])")
     }
+}
+
+for (_ , _) in resultsOfGames {
+    print("My team \(myTeam) vs. \(resultsOfGames)")
 }
 
 /*
@@ -92,4 +96,22 @@ for number in array {
     }
 }
 
+var intArray = array
+
+for i in 0..<intArray.count {
+    switch isEvenNumber(number: intArray[i]) {
+    case true:
+        if let myIndex = array.firstIndex(of: intArray[i]) {
+            array.remove(at: myIndex)
+        }
+    default:
+        break
+    }
+}
+
 print("The created array, even numbers removed: \(array)")
+
+let resultFilter = array.filter({$0 % 2 != 0})
+print(resultFilter)
+
+array.removeAll(where: isEvenNumber)
