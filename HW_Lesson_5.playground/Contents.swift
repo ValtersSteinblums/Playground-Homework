@@ -57,15 +57,18 @@ class Figure {
         self.width = width
     }
     
-    func squareOfFigure() -> Float {
-        square = height * width
-        return square
-    }
+//    func squareOfFigure() -> Float {
+//        square = height * width
+//        return square
+//    }
+//
+//    func perimeterOfFigure() -> Float {
+//        perimeter = 2 * (height + width)
+//        return perimeter
+//    }
     
-    func perimeterOfFigure() -> Float {
-        perimeter = 2 * (height + width)
-        return perimeter
-    }
+    func squareOfFigure() -> Float { return square }
+    func perimeterOfFigure() -> Float { return perimeter }
 }
 
 class Rectangle: Figure {
