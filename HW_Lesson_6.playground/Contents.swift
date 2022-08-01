@@ -36,7 +36,12 @@ func calculateResult(firstNumber numberOne: Int ,andSecondNumber numberTwo: Int,
     case .addition: result += numberTwo
     case .subtraction: result -= numberTwo
     case .multiplication: result *= numberTwo
-    case .division: result /= numberTwo
+    case .division:
+        guard numberTwo > 0 else {
+            print("It's not allowed to divide with 0")
+            return result
+        }
+        result /= numberTwo
     }
     
     print("Result: \(calculationType.rawValue) of \(numberOne) and \(numberTwo) = \(result)")
@@ -50,7 +55,7 @@ func calculateResult(firstNumber numberOne: Int ,andSecondNumber numberTwo: Int,
  Call func 4 times for all calculateResult
  */
 let firstNumber = 8
-let secondNumber = 5
+let secondNumber = 0
 
 calculateResult(firstNumber: firstNumber, andSecondNumber: secondNumber, withCalculationType: .addition)
 calculateResult(firstNumber: firstNumber, andSecondNumber: secondNumber, withCalculationType: .subtraction)
